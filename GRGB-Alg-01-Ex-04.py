@@ -5,3 +5,4 @@ area = x * y
 hect = area / 10000
 
 print("Area do terreno(Hectares):", hect, "\n")
+# same because ez
