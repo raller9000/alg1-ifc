@@ -1,8 +1,8 @@
-x = float(input("Digite a largura(M): "))
-y = float(input("Digite a profundidade(M): "))
+n1 = input
+n2 = input 
+n3 = input
 
-area = x * y
-hect = area / 10000
-
-print("Area do terreno(Hectares):", hect, "\n")
-# same because ez
+m1 = min(n1, n2, n3)
+m3 = max(n1, n2, n3)
+m2 = (n1 + n2 + n3) - (m1 + m3)
+print( m1, m2, m3, "\n")

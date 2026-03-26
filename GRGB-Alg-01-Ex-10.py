@@ -1,14 +1,8 @@
-import math
+matricula = input("Digite uma matricula (AASDDD) \n")
 
-a = int(input("Digite um número inteiro. \n"))
-b = int(input("Digite outro número inteiro. \n"))
-
-sum = a + b
-diff = b - a
-multi = a * b
-div = a / b
-rest = a % b
-log10 = math.log10(a)
-elevated = a ** b
-
-print(f"Soma {sum} \nDiferença {diff} \nMultiplicacao {multi} \nDiviso {div:.2f} \nResto da diviso {rest} \nLogaritmo 10 {log10:.2f} \nElevado a {elevated:.2f} \n")
+if len(matricula) == 6 and matricula.isdigit():
+    ano = str(matricula[0:2])
+    semestre = str(matricula[2:3])
+    id = str(matricula[3:6])
+    
+    print("ano da matricula:", ano, "\nsemestre da matricula:", semestre)

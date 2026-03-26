@@ -1,10 +1,7 @@
-firstDepo = float(input("Digite o valor do primeiro depósito. \n"))
+data = input("Digite uma data em 6 digitos (dia, mes, ano sem separador) \n")
 
-#pelo que eu entendo uma variavel estatica taxa é mais facilde usar e facilita ter em um projeto maior
-tax = 0.12
-
-firstYear = firstDepo + (firstDepo * tax)
-secondYear = firstYear + (firstYear * tax)
-thirdYear = secondYear + (secondYear * tax)
-
-print(f"valor do primeiro ano: R$ {firstYear:.2f} \nvalor do segundo ano: R$ {secondYear:.2f} \nvalor do terceiro ano: R$ {thirdYear:.2f} \n")
+if len(data) == 6 and data.isdigit():
+    dia = str(data[0:2])
+    mes = int(data[2:4])
+    ano = int(data[4:6])
+    print(f"data: {ano}{mes}{dia} \n")

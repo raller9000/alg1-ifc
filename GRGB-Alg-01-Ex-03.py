@@ -1,6 +1,4 @@
-x = float(input("Digite a largura(M): "))
-y = float(input("Digite a profundidade(M): "))
+import time
 
-area = x * y
-
-print("Area da sala(M²):", area, "\n")
+asctime = time.asctime()
+print(asctime)

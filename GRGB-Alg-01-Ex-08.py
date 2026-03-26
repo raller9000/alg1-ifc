@@ -1,8 +1,6 @@
-x = float(input("Quantas bugigangas? \n"))
-y = float(input("Quantas quinquilharias? \n"))
+N = input("Digite uma squencia qualquer de ints de ate 3 digitos")
 
-# EU COLOCAR VARIAVEL EM INGLES SIM, é costume, da pra ver nos outros projetos no meu git :)
-floattokilo = (x * 75) + (y * 112) / 1000
-total = x + y
+C, D, U= map(int, N)
+M = U*100 + D*10 + C
 
-print(f"Total de itens: {total} \nTotal em kg: {floattokilo:.2f} \n")
+print(M, "\n")

@@ -1,10 +1,9 @@
-n = int(input("Digite um numero inteiro positivo. \n"))
+N = input("Digite uma squencia qualquer de ints de ate 3 digitos \n")
 
-#fiz apenas pra ver como if funciona no python, faz tempo q n faco nesta linguagem
-if n <= 0:
-    print("O numero deve ser um inteiro positivo. \n")
+C, D, U= map(int, N)
+C = C * 100
+D = D * 10
 
-else:
-    soma = (n * (n + 1)) // 2
-    
-print(f"A soma dos números inteiros de 1 a {n} e: {soma}")
+print(f"centena: {C} \n")
+print(f"dezena: {D} \n")
+print(f"unidade: {U} \n")
