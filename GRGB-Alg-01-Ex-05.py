@@ -1,13 +1,9 @@
-rawcents = int(input("digite os centavos (0, 99): \n"))
+#fractions of N where A = N + (N-1) + (N-2) + ... + 1/N
 
-fifty, remainder = divmod(rawcents, 50)
-twentyfive, remainder = divmod(remainder, 25)
-ten, remainder = divmod(remainder, 10)
-five, remainder = divmod(remainder, 5)
-rest = remainder
+N = int(input())
+A = N
 
-print(f"Moedas de 50 centavos: {fifty}")
-print(f"Moedas de 25 centavos: {twentyfive}")
-print(f"Moedas de 10 centavos: {ten}")
-print(f"Moedas de 5 centavos: {five}")
-print(f"Resto: {rest} centavos \n")
+for i in range(1, N):
+    A += (N-i)/(i+1)
+
+print(A)

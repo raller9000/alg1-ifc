@@ -1,8 +1,15 @@
-matricula = input("Digite uma matricula (AASDDD) \n")
+#complex thing
 
-if len(matricula) == 6 and matricula.isdigit():
-    ano = str(matricula[0:2])
-    semestre = str(matricula[2:3])
-    id = str(matricula[3:6])
-    
-    print("ano da matricula:", ano, "\nsemestre da matricula:", semestre)
+A = 1.0
+
+N = int(input())
+i = 1
+
+while i > 0:
+
+    if i + 2 > 2*N - 1:
+        break
+
+    A += 1/(i+2)
+    i += 2
+print(A)

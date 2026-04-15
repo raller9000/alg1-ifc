@@ -1,12 +1,7 @@
-from email.mime import text
+#15 Loop
 
-raw = input("Digite o horario no formato (dia/hora/minuto/segundo) \n")
-day, hour, minute, second = raw.split("/")
+name = "Gustavo"
 
-day = int(day)
-hour = int(hour)
-minute = int(minute)
-second = int(second)
+for i in range(0, 14):
+    print(name)
 
-total = (day * 24 * 3600) + (hour * 3600) + (minute * 60) + second
-print("Total de segundos: ", total, "segundos")

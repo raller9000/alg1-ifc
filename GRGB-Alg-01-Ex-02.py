@@ -1,7 +1,7 @@
-total = int(input("Digite uma quantia de segundos \n"))
+#/1 to 50
 
-days, remainder = divmod(total, 86400)
-hours, remainder = divmod(remainder, 3600)
-minutes, seconds = divmod(remainder, 60)
+x = 1
 
-print(f"{days}d/{hours}h/{minutes}m/{seconds}s \n")
+while x <= 50:
+    print(x)
+    x = x + 4

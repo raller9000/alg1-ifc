@@ -1,6 +1,22 @@
-N = input("Digite uma squencia qualquer de ints de ate 3 digitos")
+#10 input with some operations
 
-C, D, U= map(int, N)
-M = U*100 + D*10 + C
+x = int(input())
+xm = x
+xmin = x
+xman = x
+i=0
 
-print(M, "\n")
+while i < 10:
+    x = int(input())
+    xm += x
+    if x < xmin:
+        xmin = x
+    if x > xman:
+        xman = x
+    i += 1
+
+xm = xm / 10
+
+print("media:", xm)
+print("menor:", xmin)
+print("maior:", xman)

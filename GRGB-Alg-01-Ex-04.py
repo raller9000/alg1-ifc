@@ -1,8 +1,8 @@
-n1 = input
-n2 = input 
-n3 = input
+#fractions of A until N
 
-m1 = min(n1, n2, n3)
-m3 = max(n1, n2, n3)
-m2 = (n1 + n2 + n3) - (m1 + m3)
-print( m1, m2, m3, "\n")
+N = int(input())+1 #seria +1 para compensar pelo loop for e n dar pra dividir pro i=0
+A = 1.0
+
+for i in range(1, N):
+    A = A + 1/i
+    print(A)

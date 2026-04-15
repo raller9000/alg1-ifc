@@ -1,7 +1,38 @@
-data = input("Digite uma data em 6 digitos (dia, mes, ano sem separador) \n")
+#input with some operations until empty input
 
-if len(data) == 6 and data.isdigit():
-    dia = str(data[0:2])
-    mes = int(data[2:4])
-    ano = int(data[4:6])
-    print(f"data: {ano}{mes}{dia} \n")
+x = input()
+
+i = 0
+
+if x == '':
+    exit()
+else:
+    x = int(x)
+
+xm = x
+xmin = x
+xman = x
+
+
+while i > -1:
+    x = input()
+    if x == '':
+        break
+    else:
+        x = int(x)
+
+        xm += x
+
+        if x < xmin:
+            xmin = x
+
+        if x > xman:
+            xman = x
+
+    i += 1
+
+xm = xm / i
+
+print("media:", xm)
+print("menor:", xmin)
+print("maior:", xman)

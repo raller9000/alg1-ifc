@@ -1,6 +1,7 @@
-inputos = input("Digite uma squencia qualquer de ints de ate 4 digitos")
+#while 1 to 20
 
-a, b, c, d = map(int, inputos.split())
-total = a + b + c + d
+x = 1
 
-print(f"Total: {total}\n")
+while x <= 20:
+    print(x)
+    x = x + 1
