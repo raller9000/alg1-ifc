@@ -1,8 +1,38 @@
-#fractions of A until N
+#distance from a point to another, very hard
 
-N = int(input())+1 #seria +1 para compensar pelo loop for e n dar pra dividir pro i=0
-A = 1.0
+perimeter = 0
 
-for i in range(1, N):
-    A = A + 1/i
-    print(A)
+x = input()
+if x == "":
+    exit()
+y = input()
+
+x0 = float(x)
+y0 = float(y)
+
+lastx = x0
+lasty = y0
+
+while True:
+    try:
+        xi = input()        
+        if x == "":
+            break
+        yi = input()
+
+        x = float(xi)
+        y = float(yi)
+
+    except ValueError:
+        break
+
+    distance = ((lastx - x)**2 + (lasty - y)**2)**0.5
+    perimeter += distance
+
+    lastx = x
+    lasty = y
+
+distance = ((lastx - x0)**2 + (lasty - y0)**2)**0.5
+perimeter += distance
+
+print("perimetro: ", perimeter) 

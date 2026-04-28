@@ -1,12 +1,17 @@
-#less complex thing
+#phrasereverse
 
-A = 1.0
+while True:
+    x = input()
+    if x == "":
+        break
 
-N = int(input())
+    x = x.replace(" ","")
+    y = x[::-1]
 
-i=2
-
-while i <= N:
-    A += 1/i
-    i += 1
-print(A)
+    if y.casefold() == x.casefold():
+        print("\npalindromo")
+        print(x,"=",y)
+    else:
+        print("\nnao palindromo")
+        print(x,"!=",y)
+    

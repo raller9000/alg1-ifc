@@ -1,38 +1,9 @@
-#input with some operations until empty input
+#newton sqrt method
 
-x = input()
+x = int(input())
+y = x/2
+thegoodenough = 0.001 #could be anything (0.n+1, n= quantity of zeros) :)
 
-i = 0
-
-if x == '':
-    exit()
-else:
-    x = int(x)
-
-xm = x
-xmin = x
-xman = x
-
-
-while i > -1:
-    x = input()
-    if x == '':
-        break
-    else:
-        x = int(x)
-
-        xm += x
-
-        if x < xmin:
-            xmin = x
-
-        if x > xman:
-            xman = x
-
-    i += 1
-
-xm = xm / i
-
-print("media:", xm)
-print("menor:", xmin)
-print("maior:", xman)
+while abs(y**2 - x) > thegoodenough:
+    y = (y + x/y)/2
+print(y)

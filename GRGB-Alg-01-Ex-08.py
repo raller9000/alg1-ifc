@@ -1,22 +1,30 @@
-#10 input with some operations
+#cesar's encrption
 
-x = int(input())
-xm = x
-xmin = x
-xman = x
-i=0
+text = input()
+shift = int(input())
+result = ""
 
-while i < 10:
-    x = int(input())
-    xm += x
-    if x < xmin:
-        xmin = x
-    if x > xman:
-        xman = x
-    i += 1
+while True:
 
-xm = xm / 10
+    if text == "":
+        break
 
-print("media:", xm)
-print("menor:", xmin)
-print("maior:", xman)
+    for char in text:
+
+        if char.isalpha():
+            base = ord('A') if char.isupper() else ord('a')
+            result += chr((ord(char) - base + shift) % 26 + base)
+
+        # base: determina em que caixa a letra esta e associa o unicode de acordo
+        # chr: converte o unicode de volta para caractere
+        # ord: converte o caractere para unicode
+        # (ord(char) - base + shift) % 26: calcula a posiçao da letra apos o deslocamento, garantindo que ela permaneça dentro do alfabeto
+        # + base: converte a posiçao de volta para o codigo unicode correspondente a letra maiuscula ou minuscula
+        # importante para dps !!!
+
+        else:
+            result += char
+
+    print(result)
+    result = ""
+    text = input()

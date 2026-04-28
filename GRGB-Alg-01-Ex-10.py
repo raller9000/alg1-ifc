@@ -1,15 +1,15 @@
-#complex thing
+#reverse
 
-A = 1.0
-
-N = int(input())
-i = 1
-
-while i > 0:
-
-    if i + 2 > 2*N - 1:
+while True:
+    x = input()
+    if x == "":
         break
+    y = x[::-1]
 
-    A += 1/(i+2)
-    i += 2
-print(A)
+    if y.casefold() == x.casefold():
+        print("\npalindromo")
+        print(x,"=",y)
+    else:
+        print("\nnao palindromo")
+        print(x,"!=",y)
+    

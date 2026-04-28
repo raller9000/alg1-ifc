@@ -1,7 +1,16 @@
-#/1 to 50
+#sales
 
-x = 1
+price = [4.95, 9.95, 14.95, 19.95, 24.95] 
+disconto = 0.20
 
-while x <= 50:
-    print(x)
-    x = x + 4
+i = 0
+
+print("Original\tCom Desconto")
+
+while i < 5:
+    original = price[i]
+    discontado = original * (1 - disconto)
+    
+    print(f"{original:.2f}\t\t{discontado:.2f}")
+    
+    i += 1
