@@ -1,16 +1,9 @@
-#parity bits
+#sorteia_dado()
 
-while True:
-    x = input()
-    if x == "":
-        break
-    elif len(x) != 8 or any(c not in "01" for c in x):
-        print("Invalido")
-        continue
+import random
 
-    um = x.count("1")
-    if um % 2 == 0:
-        print("Paridade par")
-    else:
-        print("Paridade impar")
-        
+def sorteia_dado():
+    x = random.randint(1,6)
+    return x
+
+print(sorteia_dado())

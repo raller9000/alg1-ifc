@@ -1,15 +1,18 @@
-#reverse
+#conta_digitos(n, d)
 
-while True:
-    x = input()
-    if x == "":
-        break
-    y = x[::-1]
-
-    if y.casefold() == x.casefold():
-        print("\npalindromo")
-        print(x,"=",y)
+def conta_digitos(n, d):
+    if 0 < d <= 9:
+        i = 0
+        while n > 0:
+            if n % 10 == d:
+                i = i + 1
+            n = n//10
+        return i
+        #print(i," vezes o digito ",d) tirado para compatibilidade com outra questao
     else:
-        print("\nnao palindromo")
-        print(x,"!=",y)
-    
+        return "Error"
+
+n = int(input())
+d = int(input())
+
+conta_digitos(n, d)

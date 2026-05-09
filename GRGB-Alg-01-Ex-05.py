@@ -1,30 +1,15 @@
-#price calculation
+#potencia(x, y)
 
-ac = 0.0
-inputs = 0
+def potencia(x, y):
+    resultado = 1
 
-while True:
+    while y > 0:
+        resultado *= x
+        y -= 1
 
-    x = input()
-    if x == "":
-        break
+    return resultado
 
-    x = float(x)
+x = float(input())
+y = int(input())
 
-    if x <= 2:
-        ac += 0.0
-        inputs += 1
-
-    elif x >=3 and x <= 12:
-        ac += 15.00
-        inputs += 1
-
-    elif x >= 65:
-        ac += 18.00
-        inputs += 1
-
-    else:
-        ac += 23.00
-        inputs += 1
-
-print(f"total: {ac:.2f}")
+print(potencia(x, y))

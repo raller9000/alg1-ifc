@@ -1,11 +1,34 @@
-#prime fatorization of a number
+# encaixa 2
 
-fator = 2
-n = int(input())
+def encaixa(a, b):
 
-while n > 1:
-    if n % fator == 0:
-        print(fator)
-        n = n/fator
+    while a != b and a > 0:
+        a = a//10
+
+    # mudei pra encaixar a funcao
+
+    return a == b
+
+def segmento(a, b):
+
+    if a > b:
+        maior = a
+        menor = b
+        
     else:
-        fator = fator + 1
+        maior = b
+        menor = a
+
+    while maior > 0:
+
+        if encaixa(maior, menor):
+            return "segmento"
+        
+        maior = maior // 10
+
+    return "nao segmento"
+
+a = int(input())
+b = int(input())
+
+print(segmento(a, b))

@@ -1,12 +1,14 @@
-#table of multiplication with while
+# encaixa(a, b)
 
-column = 1
-row = 1
+def encaixa(a, b):
 
-while row <= 10:
-    while column <= 10:
-        print(row * column, end="\t")
-        column += 1
-    print()
-    row += 1
-    column = 1
+    while a != b and a > 0:
+        a = a//10
+    if a == b:
+        return "encaixa"
+    else:
+        return "nao encaixa"
+
+a = int(input())
+b = int(input())
+print(encaixa(a, b))
