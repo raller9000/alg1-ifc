@@ -1,12 +1,12 @@
-#imprime_n_vezes(nome, n)
+lista = []
 
-def imprime_n_vezes(nome, n):
-    nome = input()
-    n = int(input())
-
-    while n > 0:
-        print(nome)
-        n = n - 1
-
-imprime_n_vezes()
-
+while True:
+    numero = int(input())
+    
+    if numero == 0:
+        break
+    
+    lista.append(numero)
+    
+lista.sort(reverse=True)
+print(lista)

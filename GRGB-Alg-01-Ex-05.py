@@ -1,15 +1,12 @@
-#potencia(x, y)
+lista1 = []
 
-def potencia(x, y):
-    resultado = 1
+while True:
+    number = input()
+    if number == '':
+        break
+    lista1.append(int(number))
 
-    while y > 0:
-        resultado *= x
-        y -= 1
+lista1.sort()
 
-    return resultado
-
-x = float(input())
-y = int(input())
-
-print(potencia(x, y))
+for number in lista1:
+    print(number)

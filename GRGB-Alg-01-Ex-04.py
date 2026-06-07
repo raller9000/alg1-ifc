@@ -1,7 +1,15 @@
-#quadrado(x)
+lista1 = []
 
-def quadrado(x):
-    x = float(input())
-    return x**2
+while True:
+    word = input()
+    if word == '':
+        break
+    lista1.append(word)
 
-print(quadrado())
+for word in lista1:
+    N = lista1.count(word)
+    while N != 1:
+        lista1.remove(word)
+        N = lista1.count(word)
+
+print(lista1)

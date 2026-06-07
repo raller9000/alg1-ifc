@@ -1,10 +1,12 @@
-#imprime_nome(nome)
+lista = []
 
-def imprime_nome(nome):
-    nome = input()
-    i = 0
-    while i < 5:
-        print(nome)
-        i = i + 1
-
-imprime_nome()
+while True:
+    numero = int(input())
+    
+    if numero == 0:
+        break
+    
+    lista.append(numero)
+    
+lista.sort()
+print(lista)

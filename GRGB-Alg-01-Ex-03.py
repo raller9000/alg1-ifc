@@ -1,10 +1,32 @@
-#quociente(x, y)
+lista1 = []
 
-def quociente(x, y):
-    x = float(input())
-    y = float(input())
-    return x/y
+import tkinter as tk
+from tkinter import messagebox
 
-print(quociente())
+root = tk.Tk()
+root.withdraw()
 
-# uma funcao deve usar print dentro ou fora do construtor no caso de return?
+def main():
+    lista1 = []    
+    while True:
+        numero = int(input())
+    
+        if numero == 0:
+            break
+        if len(str(abs(numero))) < 4:
+            messagebox.showerror("Valor inválido", "O número deve conter no máximo 4 dígitos.")
+            break
+
+        lista1.append(numero)
+    
+    x = len(lista1)
+    lista1 = sorted(lista1)
+    lista2 = []
+
+    for i in range(2, x-2):
+        lista2.append(lista1[i])
+
+    print(lista2)
+    print(lista1)
+
+main()
