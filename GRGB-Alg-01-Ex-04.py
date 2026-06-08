@@ -1,15 +1,28 @@
-lista1 = []
+def morse(string):
+    lista = []
+    coded = morse = {
+    'A': '.-',    'B': '-...',  'C': '-.-.',  'D': '-..',
+    'E': '.',     'F': '..-.',  'G': '--.',   'H': '....',
+    'I': '..',    'J': '.---',  'K': '-.-',   'L': '.-..',
+    'M': '--',    'N': '-.',    'O': '---',   'P': '.--.',
+    'Q': '--.-',  'R': '.-.',   'S': '...',   'T': '-',
+    'U': '..-',   'V': '...-',  'W': '.--',   'X': '-..-',
+    'Y': '-.--',  'Z': '--..',
 
-while True:
-    word = input()
-    if word == '':
-        break
-    lista1.append(word)
+    '0': '-----', '1': '.----', '2': '..---', '3': '...--',
+    '4': '....-', '5': '.....', '6': '-....', '7': '--...',
+    '8': '---..', '9': '----.'
+}
+    #espero q n caia na prova meter uma lista dessa
+    
+    result = []
+    for i in string:
+        if i in coded:
+            result.append(coded[i])
+    print("/".join(result))
 
-for word in lista1:
-    N = lista1.count(word)
-    while N != 1:
-        lista1.remove(word)
-        N = lista1.count(word)
+def main():
+    frase = input()
+    morse(frase)
 
-print(lista1)
+main()
