@@ -1,13 +1,28 @@
-#eh_bissexto(ano)
+lista = []
+listaUnder = []
+listaPlus = []
+listameds = []
 
-def eh_bissexto(ano):
-    if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
-        return True
-    else:
-        return False
+while True:
+    number = input()
+    
+    if number == '':
+        break
+    
+    lista.append(int(number))
 
-ano = int(input())
-if eh_bissexto(ano):
-    print(ano, "é um ano bissexto.") 
-else:
-    print(ano, "não é um ano bissexto.")
+med = sum(lista) // len(lista)
+
+for number in lista:
+    if number < med:
+        listaUnder.append(number)
+    elif number > med:
+        listaPlus.append(number)
+    elif number == med:
+        listameds.append(number)
+
+print("Média: " + str(med))
+print("Elementos abaixo da média: " + str(listaUnder))
+print("Elementos iguais à média: " + str(listameds))
+print("Elementos acima da média: " + str(listaPlus))
+

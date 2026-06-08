@@ -1,9 +1,12 @@
-#sorteia_dado()
+number = int(input())
 
-import random
+def main():
+    listdiv = []
+    div = number
+    while div > 0:
+        if number % div == 0:
+            listdiv.append(div)
+        div = div - 1
+    print(listdiv)
 
-def sorteia_dado():
-    x = random.randint(1,6)
-    return x
-
-print(sorteia_dado())
+main()

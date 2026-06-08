@@ -1,14 +1,25 @@
-# encaixa(a, b)
-
-def encaixa(a, b):
-
-    while a != b and a > 0:
-        a = a//10
-    if a == b:
-        return "encaixa"
+def ordered(lista):
+    if len(lista) == 0:
+        return True
+    
+    if lista == sorted(lista):
+        return True
+    elif lista == sorted(lista, reverse=True):
+        return True
     else:
-        return "nao encaixa"
+        return False
 
-a = int(input())
-b = int(input())
-print(encaixa(a, b))
+def main():
+    lista1 = []
+    
+    while True:
+        numero = input()
+        if numero == '':
+            break
+        lista1.append(int(numero))
+    if ordered(lista1):
+        print('classificada')
+    else:
+        print('desclassificada')
+
+main()

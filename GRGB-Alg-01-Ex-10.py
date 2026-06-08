@@ -1,18 +1,58 @@
-#conta_digitos(n, d)
-
-def conta_digitos(n, d):
-    if 0 < d <= 9:
-        i = 0
-        while n > 0:
-            if n % 10 == d:
-                i = i + 1
-            n = n//10
-        return i
-        #print(i," vezes o digito ",d) tirado para compatibilidade com outra questao
+def func():
+    lista = []
+    
+    while True:
+        palavra = input()
+        
+        if palavra == '':
+            break
+        
+        lista.append(palavra)
+    
+    if len(lista) == 0:
+        exit()
+    elif len(lista) == 1:
+        print(lista[0])
+    elif len(lista) == 2:
+        print(lista[0] + " e " + lista[1])
     else:
-        return "Error"
+        print(", ".join(lista[:-1]) + " e " + lista[-1])
 
-n = int(input())
-d = int(input())
+func()
 
-conta_digitos(n, d)
+def main():
+    print("")
+    print("\ndeclarar lista e loop de palavras")
+    print("""while True:
+        palavra = input()
+        
+        if palavra == '':
+            break
+        
+        lista.append(palavra)""")
+    print("")
+    print("\ncondiçoes para imprimir a lista")
+    print("""f len(lista) == 0:
+        exit()
+          
+        se ela e vazia, apenas termina
+          
+    elif len(lista) == 1:
+        print(lista[0])
+          
+        apenas uma o programa so printa posicao zero
+        ('banana')
+
+    elif len(lista) == 2:
+        print(lista[0] + " e " + lista[1])
+          
+        2 palavras = a e b
+        ('banana e laranja')
+          
+    else:
+        print(", ".join(lista[:-1]) + " e " + lista[-1])
+          
+          
+        mais de duas palavras faz toda a logica de printar com virgula ate a penultima palavra, precisa de exemplo?""")
+    
+main()
